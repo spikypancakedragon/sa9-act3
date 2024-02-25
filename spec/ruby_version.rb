@@ -1,5 +1,7 @@
 class Animal
 
+  attr_accessor :species, :weight, :habitat
+
   def initialize(s, w, h)
     @species = s
     @weight = w
@@ -11,8 +13,8 @@ class Animal
   end
 
   def eat(food, how_much)
-    "The #{@species} is nourishing itself with #{food}!"
     @weight += how_much
+    return "The #{@species} is nourishing itself with #{food}!"
   end
 
   def sleep
